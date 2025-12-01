@@ -1,0 +1,19 @@
+name: Say hello
+
+on:
+  push:
+    branches:
+      - main # La rama principal del repositorio
+
+
+jobs:
+  hello_world:
+   runs-on: ubuntu-latest # Sistema operativo donde se ejecutará
+   steps:
+      - name: Do echo message
+        run: echo "Hola amigo"
+      
+      - name: Tell me the date
+        run: date
+
+      - run: ls -l # Paso sin nombre, ejecuta un comando de shell
