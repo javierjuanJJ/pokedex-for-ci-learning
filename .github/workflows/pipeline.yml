@@ -17,7 +17,7 @@ jobs:
           node-version: '12' # Versión de Node a usar [13]
 
       - name: Install dependencies
-        run: npm install --no-audit --no-fund # Instala dependencias optimizado
+        run: npm install --no-audit --no-fund --no-optional # Instala dependencias optimizado
 
       - name: Linter
         run: npm run lint # Ejecuta el linter
