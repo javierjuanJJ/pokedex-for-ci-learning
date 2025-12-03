@@ -20,7 +20,7 @@ jobs:
         run: npm install --no-audit --no-fund --no-optional # Instala dependencias optimizado
 
       - name: Linter
-        run: npm run lint # Ejecuta el linter
+        run: npm run eslint # Ejecuta el linter
 
       - name: Build
         run: npm run build # Ejecuta la build
