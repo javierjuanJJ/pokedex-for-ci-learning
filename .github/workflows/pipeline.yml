@@ -14,16 +14,13 @@ jobs:
 
       - uses: actions/setup-node@v2 # Configura Node.js
         with:
-          node-version: '12' # Versión de Node a usar [13]
+          node-version: '14' # Versión de Node a usar [13]
 
       - name: Install dependencies
-        run: npm install --no-audit --no-fund --no-optional # Instala dependencias optimizado
-
-      - name: Linter
-        run: npm run eslint # Ejecuta el linter
-
+        run: npm install --no-audit --no-fund --no-optional
+      - name: Lint
+        run: npm run eslint
       - name: Build
-        run: npm run build # Ejecuta la build
-
+        run: npm run build
       - name: Test
-        run: npm run test # Ejecuta los tests unitarios
+        run: npm test
